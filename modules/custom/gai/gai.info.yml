@@ -1,0 +1,6 @@
+name: GAI Custom Module
+description: Custom module for GAI website
+package: GAI
+type: module
+version: 1.0
+core: 8.x
