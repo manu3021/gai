@@ -1,0 +1,12 @@
+name: Admin Toolbar
+# core: 8.x
+description: Admin Toolbar improve the default Drupal Toolbar,it lets the hover of sub menus.
+package: Administration
+type: module
+# version: 1.0
+
+# Information added by Drupal.org packaging script on 2015-07-30
+version: '8.x-1.9'
+core: '8.x'
+project: 'admin_toolbar'
+datestamp: 1438248243
