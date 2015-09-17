@@ -1,7 +1,0 @@
-gai.hello:
-  path: '/hello'
-  defaults:
-    _controller: '\Drupal\gai\Controller\HelloController::content'
-    _title: 'Hello Atul'
-  requirements:
-    _permission: 'gai global access'

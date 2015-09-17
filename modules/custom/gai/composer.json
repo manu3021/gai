@@ -1,9 +1,0 @@
-{
-  "name": "drupal/gai",
-  "description": "This is composer.json for gai module.",
-  "type": "drupal-module",
-  "license": "GPL-2.0+",
-  "require": {
-    "drupal/pathauto": "7.1.2"
-  }
-}
