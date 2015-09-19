@@ -1,0 +1,11 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+      css/responsive.css: {}
+
+global-scripts:
+  version: VERSION
+  js:
+      js/custom.js: {}

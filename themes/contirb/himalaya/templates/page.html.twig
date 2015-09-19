@@ -1,0 +1,144 @@
+{#
+/**
+ * @file
+ * Himalaya's theme implementation to display a single page.
+ *
+ */
+#}
+<div id="page-wrapper" class="section with-arrow">
+  <div id="page">
+    <header id="header" role="banner" aria-label="{{ 'Site header'|t}}">
+      <nav id="navigation" class="margin_bottom">
+        <div class="container mean-container">
+          <div class="mean-bar">
+            {% if page.primary_menu %}
+              <a href="#nav" class="meanmenu-reveal" style="background:;color:#fff;right:0;left:auto;">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+              <nav class="mean-nav submenu">
+                {{ page.primary_menu }}  
+              </nav>
+            {% endif %}  
+          </div>
+        {% if logo %}
+          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
+            <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
+          </a>
+        {% endif %}
+         {% if page.primary_menu %}
+            <div id="main-menu">
+              {{ page.primary_menu }}
+            </div>
+         {% endif %}
+        </div>
+      </nav>
+    </header>
+    <div class="col-100 float_left">
+      <div class="container site-slogan-name">
+       {% if site_name or site_slogan %}
+          <div id="name-and-slogan"{% if hide_site_name and hide_site_slogan %} class="visually-hidden"{% endif %}>
+            {% if site_name %}
+              {% if title %}
+                <div id="site-name"{% if hide_site_name %} class="visually-hidden"{% endif %}>
+                  <strong>
+                    <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"><span>{{ site_name }}</span></a>
+                  </strong>
+                </div>
+              {# Use h1 when the content title is empty #}
+              {% else %}
+                <h1 id="site-name" {% if hide_site_name %} class="visually-hidden" {% endif %}>
+                  <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"><span>{{ site_name }}</span></a>
+                </h1>
+              {% endif %}
+            {% endif %}
+            {% if site_slogan %}
+              <div id="site-slogan"{% if hide_site_slogan %} class="visually-hidden"{% endif %}>
+                {{ site_slogan }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+    </div>
+  </div>
+    <div class="message col-100 float_left">
+      {% if messages %}
+        <div id="messages" class="container">
+          <div class="section clearfix">{{ messages }}</div>
+        </div>
+      {% endif %}
+    </div>
+    {% if page.header %} 
+      <div class="container">
+        <div class="header-region col-100 float_left">
+          {{ page.header }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.help %} 
+      <div class="container">
+        <div class="help-wrapper float_left col-100">
+          {{ page.help }}
+        </div>
+      </div>
+    {% endif %} 
+    <div id="main-wrapper" class="clearfix paddingt">
+      <div id="main" class="clearfix container">
+        <div class="breadcrumb col-100 float_left">
+          {{ page.breadcrumb }}
+        </div>
+        {% if page.sidebar_first %}
+          <div id="sidebar" class="column sidebar float_left">
+            <aside class="section" role="complementary">
+              {{ page.sidebar_first }}
+            </aside>
+          </div>
+        {% endif %}
+        <main id="content" class="two-column float_left with-left-sidebar" role="main">
+          <section class="section">
+            <a id="main-content" tabindex="-1"></a>
+            {{ title_prefix }}
+            {% if title %}
+              <h1 class="title" id="page-title">
+                {{ title }}
+              </h1>
+            {% endif %}
+            {{ title_suffix }}
+            {% if tabs %}
+              <nav class="tabs himalaya-tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
+                {{ tabs }}
+              </nav>
+            {% endif %}
+            {% if action_links %}
+              <ul class="action-links">{{ action_links }}</ul>
+            {% endif %}
+            {{ page.content }}
+          </section>
+        </main>
+       
+      </div>
+    </div>
+  </div>
+  <div id="footer-section container">
+    <div class="col-100 float_left footer-inner-section">
+      {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+        <div id="footer-columns" class="clearfix col-100 float_left">
+          <div class="footer-col footer_first_wrapper column-3  float_left">{{ page.footer_first }}</div>
+          <div class="footer-col footer_second_wrapper column-3 float_left">{{ page.footer_second }}</div>
+          <div class="footer-col footer_third_wrapper column-3 float_left">{{ page.footer_third }}</div>
+          <div class="footer-col footer_fourth_wrapper column-3 float_left">{{ page.footer_fourth }}</div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<div id="footer">
+  {% if page.footer %}
+    <div class="section section-full-colored">
+      <div class="section-content center">
+        {{ page.footer }}
+      </div>
+    </div>
+  {% endif %}
+</div>

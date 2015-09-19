@@ -1,0 +1,29 @@
+name: Himalaya
+type: theme
+description: 'A Himalaya theme is  flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+package: Custom
+# version: VERSION
+# core: 8.x
+libraries:
+  - himalaya/global-styling
+  - himalaya/global-scripts
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  help: Help 
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer: 'Footer'
+
+
+# Information added by Drupal.org packaging script on 2015-08-28
+version: '8.x-2.x-dev'
+core: '8.x'
+project: 'himalaya'
+datestamp: 1440740341
