@@ -9,3 +9,9 @@ global-scripts:
   version: VERSION
   js:
       js/custom.js: {}
+
+messages:
+  version: VERSION
+  css:
+    component:
+      css/messages.css: { preprocess: false }

@@ -22,8 +22,8 @@ regions:
   footer: 'Footer'
 
 
-# Information added by Drupal.org packaging script on 2015-08-28
-version: '8.x-2.x-dev'
+# Information added by Drupal.org packaging script on 2015-10-01
+version: '8.x-3.x-dev'
 core: '8.x'
 project: 'himalaya'
-datestamp: 1440740341
+datestamp: 1443670743
